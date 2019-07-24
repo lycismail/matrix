@@ -1,0 +1,70 @@
+<?xml version="1.4"?>
+
+<launch>
+
+<node name="matrix1" pkg="matrix_driver" type="matrix_driver" output="screen">
+  <remap from="/matrix/ip" to="/matrix1/ip"/>
+
+  <remap from="/sensor/matrix/freespace1" to="/sensor/matrix1/freespace1"/>
+  <remap from="/sensor/matrix/freespace2" to="/sensor/matrix1/freespace2"/>
+  <remap from="/sensor/matrix/freespace3" to="/sensor/matrix1/freespace3"/>
+  <remap from="/sensor/matrix/freespace4" to="/sensor/matrix1/freespace4"/>
+  <remap from="/sensor/matrix/objects1" to="/sensor/matrix1/objects1"/>
+  <remap from="/sensor/matrix/objects2" to="/sensor/matrix1/objects2"/>
+  <remap from="/sensor/matrix/objects3" to="/sensor/matrix1/objects3"/>
+  <remap from="/sensor/matrix/objects4" to="/sensor/matrix1/objects4"/>
+  <remap from="/sensor/matrix/image1/compressed" to="/sensor/matrix1/image1/compressed"/>
+  <remap from="/sensor/matrix/image2/compressed" to="/sensor/matrix1/image2/compressed"/>
+  <remap from="/sensor/matrix/image3/compressed" to="/sensor/matrix1/image3/compressed"/>
+  <remap from="/sensor/matrix/image4/compressed" to="/sensor/matrix1/image4/compressed"/>
+  <remap from="/sensor/matrix/image1" to="/sensor/matrix1/image1"/>
+  <remap from="/sensor/matrix/image2" to="/sensor/matrix1/image2"/>
+  <remap from="/sensor/matrix/image3" to="/sensor/matrix1/image3"/>
+  <remap from="/sensor/matrix/image4" to="/sensor/matrix1/image4"/>
+  <remap from="/sensor/matrix/lines1" to="/sensor/matrix1/lines1"/>
+  <remap from="/sensor/matrix/lines2" to="/sensor/matrix1/lines2"/>
+  <remap from="/sensor/matrix/lines3" to="/sensor/matrix1/lines3"/>
+  <remap from="/sensor/matrix/lines4" to="/sensor/matrix1/lines4"/>
+  <remap from="/sensor/matrix/signals1" to="/sensor/matrix1/signals1"/>
+  <remap from="/sensor/matrix/signals2" to="/sensor/matrix1/signals2"/>
+  <remap from="/sensor/matrix/signals3" to="/sensor/matrix1/signals3"/>
+  <remap from="/sensor/matrix/signals4" to="/sensor/matrix1/signals4"/>
+  <rosparam>
+    /matrix1/ip: 192.168.4.10:5560
+  </rosparam>
+</node>
+<!--
+<node name="matrix2" pkg="matrix_driver" type="matrix_driver" output="screen">
+  <remap from="/matrix/ip" to="/matrix2/ip"/>
+
+  <remap from="/sensor/matrix/bbox1" to="/sensor/matrix2/bbox1"/>
+  <remap from="/sensor/matrix/bbox2" to="/sensor/matrix2/bbox2"/>
+  <remap from="/sensor/matrix/bbox3" to="/sensor/matrix2/bbox3"/>
+  <remap from="/sensor/matrix/bbox4" to="/sensor/matrix2/bbox4"/>
+  <remap from="/sensor/matrix/objects1" to="/sensor/matrix2/objects1"/>
+  <remap from="/sensor/matrix/objects2" to="/sensor/matrix2/objects2"/>
+  <remap from="/sensor/matrix/objects3" to="/sensor/matrix2/objects3"/>
+  <remap from="/sensor/matrix/objects4" to="/sensor/matrix2/objects4"/>
+  <remap from="/sensor/matrix/image1/compressed" to="/sensor/matrix2/image1/compressed"/>
+  <remap from="/sensor/matrix/image2/compressed" to="/sensor/matrix2/image2/compressed"/>
+  <remap from="/sensor/matrix/image3/compressed" to="/sensor/matrix2/image3/compressed"/>
+  <remap from="/sensor/matrix/image4/compressed" to="/sensor/matrix2/image4/compressed"/>
+  <remap from="/sensor/matrix/image1" to="/sensor/matrix2/image1"/>
+  <remap from="/sensor/matrix/image2" to="/sensor/matrix2/image2"/>
+  <remap from="/sensor/matrix/image3" to="/sensor/matrix2/image3"/>
+  <remap from="/sensor/matrix/image4" to="/sensor/matrix2/image4"/>
+  <remap from="/sensor/matrix/lane1" to="/sensor/matrix2/lane1"/>
+  <remap from="/sensor/matrix/lane2" to="/sensor/matrix2/lane2"/>
+  <remap from="/sensor/matrix/lane3" to="/sensor/matrix2/lane3"/>
+  <remap from="/sensor/matrix/lane4" to="/sensor/matrix2/lane4"/>
+  <remap from="/sensor/matrix/lines1" to="/sensor/matrix2/lines1"/>
+  <remap from="/sensor/matrix/lines2" to="/sensor/matrix2/lines2"/>
+  <remap from="/sensor/matrix/lines3" to="/sensor/matrix2/lines3"/>
+  <remap from="/sensor/matrix/lines4" to="/sensor/matrix2/lines4"/>
+  <remap from="/sensor/matrix/signals" to="/sensor/matrix2/signals"/>
+  <rosparam>
+    /matrix2/ip: 192.168.1.11:5560
+  </rosparam>
+</node>
+-->
+</launch>

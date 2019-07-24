@@ -1,0 +1,9 @@
+float32 ClassConfi
+float32 ObsThetaVelocity
+geometry_msgs/Vector3 ObsPostionCov
+float32 ObsThetaCov
+geometry_msgs/Vector3 VelocityCov
+float32 ObsThetaVelocityCov
+float32 HeightCov
+float32 WidthCov
+float32 LengthCov
