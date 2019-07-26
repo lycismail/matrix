@@ -674,12 +674,12 @@ void ProcessMeta(FrameInfo *frame)
 
 void ProcessFrame(FrameInfo *frame) {
     ros::Time time;
-    if (seq_ref == 0) {
-        time = ros::Time::now();
-    }
-    else {
-        time = time_ref + (ros::Time::now() - time_ros);
-    }
+//    if (seq_ref == 0) {
+//        time = ros::Time::now();
+//    }
+//    else {
+//        time = time_ref + (ros::Time::now() - time_ros);
+//    }
 
     sensor_msgs::ImagePtr msg;
     int img_size = 0;
@@ -701,6 +701,21 @@ void ProcessFrame(FrameInfo *frame) {
     };
 
     for (int i = 0; i < frame->img_data.size(); i++){
+        long int time_image_frame = frame->meta.data().image(i).time_stamp();
+        double matrix_time_sec_frame = time_image_frame/1000.0;
+        double ros_time_sec_frame = ros::Time::now().toSec();
+        double used_time_sec_frame;
+
+        if(fabs(ros_time_sec_frame - matrix_time_sec_frame) < 1.0){
+          used_time_sec_frame = matrix_time_sec_frame;
+        } else{
+          used_time_sec_frame = ros_time_sec_frame;
+          cout << "\033[31mTime sync with matrix is failed, ros time is used in frame~~~~:  "
+               << setprecision(15)<< "matrix itme: " << matrix_time_sec_frame
+               << ", ros time:" << setprecision(15) << ros_time_sec_frame << "\033[0m" << endl;
+
+        }
+        time = ros::Time::Time(used_time_sec_frame);
         const CommonProto::Image &img_info = frame->meta.data().image(i);
         uint32_t width = img_info.width();
         uint32_t height = img_info.height();
