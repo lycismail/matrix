@@ -143,7 +143,7 @@ SYSTEMTIME TimestampToSYSTEMTIME(long long timestamp) {
 #include <opencv_apps/RectArrayStamped.h>
 
 ros::Time time_ref;
-ros::Time time_matrix;
+//ros::Time time_matrix;
 int seq_ref = 0;
 ros::Time time_ros;
 std::mutex time_mutex;
@@ -176,12 +176,12 @@ static YUVColorConvert *cvt = YUVColorConvert::GetInstance();
 void ProcessMeta(FrameInfo *frame)
 {
     ros::Time time;
-    if (seq_ref == 0) {
-        time = ros::Time::now();
-    }
-    else {
-        time = time_ref + (ros::Time::now() - time_ros);
-    }
+//    if (seq_ref == 0) {
+//        time = ros::Time::now();
+//    }
+//    else {
+//        time = time_ref + (ros::Time::now() - time_ros);
+//    }
 
     std::string coord("chassis_base");
     std::vector<float> minv_;
@@ -199,12 +199,12 @@ void ProcessMeta(FrameInfo *frame)
           used_time_sec = matrix_time_sec;
         } else{
           used_time_sec = ros_time_sec;
-          cout << "\033[31mTime sync with matrix is failed, ros time is used:  "
+          cout << "camera number" << k << " "<< "\033[31mTime sync with matrix is failed, ros time is used:  "
                << setprecision(15)<< "matrix itme: " << matrix_time_sec
                << ", ros time:" << setprecision(15) << ros_time_sec << "\033[0m" << endl;
 
         }
-        time_matrix = ros::Time::Time(used_time_sec);
+        time = ros::Time::Time(used_time_sec);
         minv_.clear();
         for (int i = 0; i < frame->meta.data().camera_matrix(k).mat_img2vcsgnd_size(); ++i)
         {
