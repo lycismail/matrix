@@ -205,9 +205,22 @@ enum ObstacleType{
   ObstacleType_TrafficLight = 4;
   ObstacleType_ParkingSlot = 5;
   ObstacleType_RoadSign = 6;
+//  ObstacleType_CrosswalkLine = 7;
+//  ObstacleType_TrafficArrow = 8;
+//  ObstacleType_TrafficCone = 9;
+//  ObstacleType_Barrel = 10;
+//  ObstacleType_YieldMark = 11;
+//  ObstacleType_SpeedMark = 12;
+//  ObstacleType_Character = 13;
+//  ObstacleType_StopLine = 14;
+//  ObstacleType_Diamond = 15;
+//  ObstacleType_BicycleSign = 16;
+//  ObstacleType_SpeedBumps = 17;
   ObstacleType_Cyclist = 18;
+//  ObstacleType_ParkingLock = 19;
 }
 
+/*
 enum TrafficLightStyle {
   TrafficLightStyle_Unknown = 0;
   TrafficLightStyle_Other = 1;
@@ -223,7 +236,27 @@ enum TrafficLightStyle {
   TrafficLightStyle_Circle = 11;
   TrafficLightStyle_Left_And_Return = 12;
 }
+*/
 
+// CN version of traffic light style
+enum TrafficLightStyle {
+  TrafficLightStyle_Circle = 0;
+  TrafficLightStyle_Forward = 1;
+  TrafficLightStyle_Left = 2;
+  TrafficLightStyle_Right = 3;
+  TrafficLightStyle_Return = 4;
+  TrafficLightStyle_Pedestrain = 5;
+  TrafficLightStyle_L_Non_Motor = 6;
+  TrafficLightStyle_L_Time = 7;
+  TrafficLightStyle_L_Other = 8;
+  TrafficLightStyle_L_Left_And_Return = 9;
+  TrafficLightStyle_L_Forward_and_Left = 10;
+  TrafficLightStyle_L_Forward_and_Right = 11;
+  TrafficLightStyle_L_No_Drive_into = 12;
+  TrafficLightStyle_L_Allow_Drive_into = 13;
+}
+
+/*
 enum TrafficLightStatus {
   TrafficLightStatus_Off = 0;
   TrafficLightStatus_Red = 1;
@@ -231,7 +264,19 @@ enum TrafficLightStatus {
   TrafficLightStatus_Yellow = 3;
   TrafficLightStatus_Other = 4;
 }
+*/
 
+// CN version of traffic light status
+enum TrafficLightStatus {
+  TrafficLightStatus_Green = 0;
+  TrafficLightStatus_Yellow = 1;
+  TrafficLightStatus_Red = 2;
+  TrafficLightStatus_Other = 3;
+  TrafficLightStatus_back = 4;
+  TrafficLightStatus_side = 5;
+}
+
+/*
 enum TrafficSignType {
   TrSignType_I_Circle = 0;
   TrSignType_I_Forward = 1;
@@ -409,6 +454,154 @@ enum TrafficSignType {
   TrSignType_W_YB_Right = 173;
   TrSignType_W_Y_Left = 174;
   TrSignType_W_Y_Right = 175;
+}
+*/
+
+// CN version of traffic sign type
+enum TrafficSignType {
+  TrSignType_Other = 0;
+  TrSignType_Other_Construction_Sign = 1;
+  TrSignType_Other_Detfp = 2;
+  TrSignType_Other_GuideSign_BlueWhite = 3;
+  TrSignType_Other_GuideSign_GreenWhite = 4;
+  TrSignType_Other_GuideSign_WhiteBlack = 5;
+  TrSignType_Other_Indications = 6;
+  TrSignType_Other_Min_Speed = 7;
+  TrSignType_Other_Mirror = 8;
+  TrSignType_Other_RedCircleLight = 9;
+  TrSignType_Other_RouteID_RedWhite = 10;
+  TrSignType_Other_RouteID_YellowBlack = 11;
+  TrSignType_Other_TravelSign_BrownWhite = 12;
+  TrSignType_P_Custom = 13;
+  TrSignType_P_GiveWay = 14;
+  TrSignType_P_Height_Lim = 15;
+  TrSignType_P_No_AnimalVehicle = 16;
+  TrSignType_P_No_Bus = 17;
+  TrSignType_P_No_Car = 18;
+  TrSignType_P_No_CargoTricycle = 19;
+  TrSignType_P_No_Dangerous = 20;
+  TrSignType_P_No_Entry = 21;
+  TrSignType_P_No_Forward = 22;
+  TrSignType_P_No_ForwardLeft = 23;
+  TrSignType_P_No_ForwardRight = 24;
+  TrSignType_P_No_Horning = 25;
+  TrSignType_P_No_Human = 26;
+  TrSignType_P_No_HumanCargoTricycle = 27;
+  TrSignType_P_No_HumanPassengerTricycle = 28;
+  TrSignType_P_No_HumanVehicle = 29;
+  TrSignType_P_No_LeftRightTurn = 30;
+  TrSignType_P_No_LeftTurn = 31;
+  TrSignType_P_No_Long_Parking = 32;
+  TrSignType_P_No_Tricycle = 33;
+  TrSignType_P_No_Motor = 34;
+  TrSignType_P_No_Motorcycle = 35;
+  TrSignType_P_No_NonMotor = 36;
+  TrSignType_P_No_Parking = 37;
+  TrSignType_P_No_Passing = 38;
+  TrSignType_P_No_PassingRev = 39;
+  TrSignType_P_No_Return = 40;
+  TrSignType_P_No_RightTurn = 41;
+  TrSignType_P_No_Tractor = 42;
+  TrSignType_P_No_Trailer = 43;
+  TrSignType_P_No_Truck = 44;
+  TrSignType_P_No_Way = 45;
+  TrSignType_P_Parking_Check = 46;
+  TrSignType_P_Slow_For = 47;
+  TrSignType_P_Speed_Lim10 = 48;
+  TrSignType_P_Speed_Lim100 = 49;
+  TrSignType_P_Speed_Lim105 = 50;
+  TrSignType_P_Speed_Lim110 = 51;
+  TrSignType_P_Speed_Lim115 = 52;
+  TrSignType_P_Speed_Lim120 = 53;
+  TrSignType_P_Speed_Lim15 = 54;
+  TrSignType_P_Speed_Lim20 = 55;
+  TrSignType_P_Speed_Lim25 = 56;  
+  TrSignType_P_Speed_Lim30 = 57;
+  TrSignType_P_Speed_Lim35 = 58;
+  TrSignType_P_Speed_Lim40 = 59;
+  TrSignType_P_Speed_Lim45 = 60;
+  TrSignType_P_Speed_Lim5 = 61;
+  TrSignType_P_Speed_Lim50 = 62;
+  TrSignType_P_Speed_Lim55 = 63;
+  TrSignType_P_Speed_Lim60 = 64;
+  TrSignType_P_Speed_Lim65 = 65;
+  TrSignType_P_Speed_Lim70 = 66;
+  TrSignType_P_Speed_Lim75 = 67;
+  TrSignType_P_Speed_Lim80 = 68;
+  TrSignType_P_Speed_Lim85 = 69;
+  TrSignType_P_Speed_Lim90 = 70;
+  TrSignType_P_Speed_Lim95 = 71;
+  TrSignType_P_Speed_Lim_Rev = 72;
+  TrSignType_P_Stop_For = 73;
+  TrSignType_Weight_Lim = 74;  
+  TrSignType_Weight_Lim_Wheel = 75;
+  TrSignType_W_Accident_Prone = 76;
+  TrSignType_W_Bad_Weather = 77;
+  TrSignType_W_Bump = 78;
+  TrSignType_W_Bumpy = 79;
+  TrSignType_W_Children = 80;
+  TrSignType_W_Circle = 81;
+  TrSignType_W_Continuous_Down = 82;
+  TrSignType_W_Continuous_Turn = 83;
+  TrSignType_W_Cross = 84;
+  TrSignType_W_Cross_Intersection = 85;
+  TrSignType_W_Cycle = 86;
+  TrSignType_W_Dam_Left = 87;
+  TrSignType_W_Dam_Right = 88;
+  TrSignType_W_Danger = 89;
+  TrSignType_W_Detour_Around = 90;
+  TrSignType_W_Detour_Left = 91;
+  TrSignType_W_Detour_Right = 92;
+  TrSignType_W_Disabled = 93;
+  TrSignType_W_Down = 94;
+  TrSignType_W_Ferry = 95;
+  TrSignType_W_Fog = 96;
+  TrSignType_W_Ford = 97;
+  TrSignType_W_Guarded_Railway = 98;
+  TrSignType_W_Hump_Bridge = 99;
+  TrSignType_W_Ice = 100;
+  TrSignType_W_Keep_Distance = 101;
+  TrSignType_W_LR_Narrow = 102;
+  TrSignType_W_LR_Turn = 103;
+  TrSignType_W_Left_Falling = 104;
+  TrSignType_W_Left_Narrow = 105;
+  TrSignType_W_Left_Turn = 106;
+  TrSignType_W_Low_Lying = 107;
+  TrSignType_W_Merge_Left = 108;
+  TrSignType_W_Merge_Right = 109;
+  TrSignType_W_Mount_Left = 110;
+  TrSignType_W_Mount_Right = 111;
+  TrSignType_W_Narrow_Bridge = 112;
+  TrSignType_W_Pedestrian = 113;
+  TrSignType_W_RL_Turn = 114;
+  TrSignType_W_Railway = 115;
+  TrSignType_W_Rain = 116;
+  TrSignType_W_Right_Falling = 117;
+  TrSignType_W_Right_Narrow = 118;
+  TrSignType_W_Right_Turn = 119;
+  TrSignType_W_Side_Wind = 120;
+  TrSignType_W_Slip = 121;
+  TrSignType_W_Slow = 122;
+  TrSignType_W_TIntersection = 123;
+  TrSignType_W_TShap = 124;
+  TrSignType_W_TShap_Left = 125;
+  TrSignType_W_TShapR_ight = 126;
+  TrSignType_W_Tidal = 127;
+  TrSignType_W_Traffic_Light = 128;
+  TrSignType_W_TShaps = 129;
+  TrSignType_W_Tunnel = 130;
+  TrSignType_W_Tunnel_Headlight = 131;
+  TrSignType_W_Two_Way = 132;
+  TrSignType_W_Up = 133;
+  TrSignType_W_Vehicle_Queue = 134;
+  TrSignType_W_Village = 135;
+  TrSignType_W_Working = 136;
+  TrSignType_W_YB_Left = 137;
+  TrSignType_W_YB_Right = 138;
+  TrSignType_W_Y_Left = 139;
+  TrSignType_W_Y_Right = 140;
+  TrSignType_P_No_Minibus = 141;
+  TrSignType_P_Width_Lim = 142;
 }
 
 enum ParkingSlotStatus {
