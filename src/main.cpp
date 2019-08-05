@@ -310,7 +310,7 @@ void ProcessMeta(FrameInfo *frame)
             }
              CommonProto::Point left, right;
              left.set_x(frame->meta.data().structure_perception().obstacles(k).obstacle(i).img_info().rect().left());
-             left.set_y(frame->meta.data().structure_perception().obstacles(k).obstacle(i).img_info().rect().top());
+             left.set_y(frame->meta.data().structure_perception().obstacles(k).obstacle(i).img_info().rect().bottom());
              right.set_x(frame->meta.data().structure_perception().obstacles(k).obstacle(i).img_info().rect().right());
              right.set_y(frame->meta.data().structure_perception().obstacles(k).obstacle(i).img_info().rect().bottom());
              CommonProto::Point gleft, gright;

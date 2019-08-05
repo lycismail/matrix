@@ -11,9 +11,9 @@ float32 Width
 float32 Height
 
 geometry_msgs/Point WorldPosition
-int32 GREEN = 0
+int32 GREEN = 2
 int32 YELLOW = 1
-int32 RED = 2
+int32 RED = 0
 
 int32 image_left
 int32 image_right
