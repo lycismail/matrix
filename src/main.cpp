@@ -249,6 +249,8 @@ void ProcessMeta(FrameInfo *frame)
             {
                 matrix_driver::Signal msg_sig;
                 msg_sig.id=to_string(msg_obj.ObsId);
+                msg_sig.header.stamp = time;
+                msg_sig.header.frame_id = coord;
                 if(frame->meta.data().structure_perception().obstacles(k).obstacle(i).property_type_size()>0){
                     int type_size=frame->meta.data().structure_perception().obstacles(k).obstacle(i).property_type_size();
                     for(int j=0;j<type_size;j++){
